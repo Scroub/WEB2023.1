@@ -4,14 +4,8 @@
 }
 
 h1 {
-  color: red;
   width: 50%;
-  background-color: black;
   border-radius: 160px 0px 0px 160px;
   text-decoration: underline;
 }
 
-h3.hover {
-  color: blue;
-  background-color: blue;
-}
