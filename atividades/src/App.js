@@ -4,6 +4,8 @@ import './App.css';
 // import Pai from './Components/Atividade01/Questão01/Pai';
 // import * as MeuPC from './Components/Atividade01/Questão02/MeuPC'
 // import {Batalha, Hero, World, Enemy} from './Components/Atividade01/Questão03/Batalha'
+//import FuncaoA from './Components/Atividade02/Questão01/FuncaoA';
+import Avo from './Components/Atividade02/Questão02/Avo';
 
 /*function App() {
   return (
@@ -48,10 +50,18 @@ import './App.css';
   )
 }*/
 
-function App(){
+/*function App(){
   return (  
     <div>
+      <FuncaoA />
+    </div>
+  )
+}*/
 
+function App(){
+  return (
+    <div>
+      <Avo />
     </div>
   )
 }
