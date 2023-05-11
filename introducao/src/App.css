@@ -3,9 +3,12 @@
   text-align: center;
 }
 
+div {
+  text-align: center;
+}
+
 h1 {
-  width: 50%;
-  border-radius: 160px 0px 0px 160px;
   text-decoration: underline;
+  background-color: gray;
 }
 

@@ -1,10 +1,13 @@
 import './App.css';
-import HelloWorld from "./Component/HelloWorld";
-import Calculadora from "./Component/Calculadora";
-import MyProps from "./Component/MyProps";
+//import HelloWorld from './Component/01HelloWorld/HelloWorld';
+//import Calculadora from './Component/02Calculadora/Calculadora';
+//import MyProps from './Component/03MyProps/MyProps';
+//import { Header, Body, Footer } from './Component/04MultiploComponente/MultiploComponente';
+//import { Supermercado, Legume, Fruta, Bebida } from './Component/05Children/Children';
+//import FuncaoA from './Component/06Contexto/FuncaoA';
+import SaveData from './Component/07Storage/FunctionLocalStorage';
 
-
-function App() {
+/*function App() {
   return (
     <div>
       1. <HelloWorld />
@@ -15,6 +18,45 @@ function App() {
                   Semestre={9} />
     </div>
   );
+}*/
+
+/*function App(){
+  return (
+    <div>
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  )
+}*/
+
+/*function App() {
+  return (
+    <div>
+      <Supermercado nome="Pinheiro">
+        <Legume nome="Batata" />
+        <Fruta nome="Maça" />
+        <Bebida nome="Whisky" />
+      </Supermercado>
+    </div>
+  )
+}*/
+
+/*function App() {
+  return (
+    <div>
+      <FuncaoA />
+    </div>
+  )
+}*/
+
+function App(){
+  return (
+    <div>
+      <SaveData />
+    </div>
+  )
 }
+
 
 export default App;

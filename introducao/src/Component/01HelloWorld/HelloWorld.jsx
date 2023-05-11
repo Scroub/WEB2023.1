@@ -5,7 +5,7 @@ import React from "react";
 // function HelloWorld () {
 //     return (
 //         <div>
-//             <h1>Iury de Oliveira</h1>
+//             <h1>Iury de Oli eira</h1>
 //             <h2>Sistemas de Informação</h2>
 //         </div>
 //     )
@@ -37,7 +37,7 @@ class HelloWorld extends React.Component{
       return (
         <div>
           <h1>Iury de Oliveira</h1>
-          <h2 href = "home">Sistemas de informação</h2>
+          <h2>Sistemas de informação</h2>
         </div>
       );
     }
