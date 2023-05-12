@@ -5,7 +5,10 @@ import './App.css';
 //import { Header, Body, Footer } from './Component/04MultiploComponente/MultiploComponente';
 //import { Supermercado, Legume, Fruta, Bebida } from './Component/05Children/Children';
 //import FuncaoA from './Component/06Contexto/FuncaoA';
-import SaveData from './Component/07Storage/FunctionLocalStorage';
+//import SaveData from './Component/07Storage/FunctionLocalStorage';
+//import Pai from './Component/08PaiFilho/Pai';
+import FunctionEstados from './Component/09Estados/FunctionEstados';
+
 
 /*function App() {
   return (
@@ -50,10 +53,26 @@ import SaveData from './Component/07Storage/FunctionLocalStorage';
   )
 }*/
 
-function App(){
+/*function App(){
   return (
     <div>
       <SaveData />
+    </div>
+  )
+}*/
+
+/*function App (){
+  return (
+    <div>
+      <Pai />
+    </div>
+  )
+}*/
+
+function App(){
+  return (
+    <div>
+      <FunctionEstados />
     </div>
   )
 }
