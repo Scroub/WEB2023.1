@@ -4,8 +4,11 @@ import './App.css';
 // import Pai from './Components/Atividade01/Questão01/Pai';
 // import * as MeuPC from './Components/Atividade01/Questão02/MeuPC'
 // import {Batalha, Hero, World, Enemy} from './Components/Atividade01/Questão03/Batalha'
-//import FuncaoA from './Components/Atividade02/Questão01/FuncaoA';
-import Avo from './Components/Atividade02/Questão02/Avo';
+// import FuncaoA from './Components/Atividade02/Questão01/FuncaoA';
+// import Avo from './Components/Atividade02/Questão02/Avo';
+// import Cidades from './Components/Atividade03/Questão01/Cidades';
+import Cidadev1 from './Components/Atividade03/Questão01/Cidadev1';
+import Pai from './Components/Atividade03/Questão02/Pai';
 
 /*function App() {
   return (
@@ -58,10 +61,20 @@ import Avo from './Components/Atividade02/Questão02/Avo';
   )
 }*/
 
-function App(){
+/*function App(){
   return (
     <div>
       <Avo />
+    </div>
+  )
+}*/
+
+function App(){
+  return (
+    <div>
+      <Cidadev1 />
+      <hr></hr>
+      <Pai />
     </div>
   )
 }
