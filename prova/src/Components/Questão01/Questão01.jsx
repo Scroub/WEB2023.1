@@ -14,9 +14,20 @@ const Questao01A = () => {
     return (
         <div>
             <h1>Os alunos: </h1>
-            <Questao01B alunos={alunos} enviarMedia={enviarMedia}/>
+            
         </div>
     )
 }
+
+function Questao01B ({alunos}, {enviarMedia}) {
+
+    
+    return (
+        <div>
+            <h1> </h1>
+        </div>
+    )
+}
+
 
 export default Questao01A

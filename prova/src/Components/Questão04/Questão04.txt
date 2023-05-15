@@ -1,0 +1,5 @@
+A solução para o uso de contextos aparece quando as propriedades passam por varios componentes mesmo que
+os mesmos acabem não utilizando diretamente fazendo com que o codigo fique mais confuso assim o uso de muitos
+props sejam utilizados sem necessidades. Dito isto os contextos permite que os dados sejam compartilhados entre
+os componentes sem passar props entre eles, assim permitindo que o codigo fique mais organizados assim
+facilitando a legibilidade do codigo. 
