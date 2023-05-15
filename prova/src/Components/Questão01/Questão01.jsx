@@ -1,5 +1,3 @@
-import Questao01B from "./Questão01B"
-
 const Questao01A = () => {
 
     const [alunos, setAlunos] = [ {nome: "Iury", notas: {ap1: 8.4, ap2: 5.4}},
@@ -19,15 +17,7 @@ const Questao01A = () => {
     )
 }
 
-function Questao01B ({alunos}, {enviarMedia}) {
-
-    
-    return (
-        <div>
-            <h1> </h1>
-        </div>
-    )
-}
 
 
-export default Questao01A
+
+export default Questao01A 
