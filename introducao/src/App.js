@@ -14,7 +14,8 @@ import './App.css';
 //import MinhaPromise from './Component/12promisses/MinhaPromessa';
 //import MeuAsync from './Component/12promisses/MeuAsync';
 //import Signin from './Component/MUI/signin/signin';
-import Mymenu from './Component/MUI/CRUD/MymenuV0';
+//import MymenuV1 from './Component/MUI/CRUD/MymenuV1';
+import MainPage from './Component/MUI/CRUD/MainPage';
 
 /*function App() {
   return (
@@ -123,11 +124,19 @@ import Mymenu from './Component/MUI/CRUD/MymenuV0';
   )
 }*/
 
-function App() {
+/*function App() {
   return (
     <div>
-      <Mymenu />
+      <MymenuV1 />
     </div>
+  )
+}*/
+
+function App() {
+  return (
+    <>
+      <MainPage />
+    </>
   )
 }
 
