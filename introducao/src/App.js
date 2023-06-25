@@ -7,8 +7,14 @@ import './App.css';
 //import FuncaoA from './Component/06Contexto/FuncaoA';
 //import SaveData from './Component/07Storage/FunctionLocalStorage';
 //import Pai from './Component/08PaiFilho/Pai';
-import FunctionEstados from './Component/09Estados/FunctionEstados';
-
+//import FunctionEstados from './Component/09Estados/FunctionEstados';
+//import PokemonAxios from './Component/10axios/PokemonAxios';
+//import TelaPrincipal from './Component/11redux/r1/TelaPrincipal';
+//import Meuindex from './Component/11redux/r2/Meuindex';
+//import MinhaPromise from './Component/12promisses/MinhaPromessa';
+//import MeuAsync from './Component/12promisses/MeuAsync';
+//import Signin from './Component/MUI/signin/signin';
+import Mymenu from './Component/MUI/CRUD/MymenuV0';
 
 /*function App() {
   return (
@@ -69,10 +75,58 @@ import FunctionEstados from './Component/09Estados/FunctionEstados';
   )
 }*/
 
-function App(){
+/*function App(){
   return (
     <div>
       <FunctionEstados />
+    </div>
+  )
+}*/
+
+/*function App(){
+  return (
+    <div>
+      <PokemonAxios />
+    </div>
+  )
+}*/
+
+/*function App(){
+  return (
+    <div>
+      <Meuindex />
+    </div>
+  )
+}*/
+
+/*function App(){
+  return (
+    <div>
+      <MinhaPromise />
+    </div>
+  )
+}*/
+
+/*function App(){
+  return (
+    <div>
+      <MeuAsync />
+    </div>
+  )
+}*/
+
+/*function App() {
+  return (
+    <div>
+        <Signin />
+    </div>
+  )
+}*/
+
+function App() {
+  return (
+    <div>
+      <Mymenu />
     </div>
   )
 }
