@@ -1,14 +1,16 @@
 import { Typography, TextField, Box, FormControl, FormLabel, FormGroup, FormControlLabel, InputLabel, Select, MenuItem, Button, Checkbox } from "@mui/material"
 import { useEffect } from "react"
 import { useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+import axios from "axios"
 
 const Editar = () => {
 
     let { id } = useParams()
+    const navigate = useNavigate()
 
     // Quebra galho, simulando uma base de dados
-    const professores= [
+    /*const professores= [
         {id:0, nome:"Iury de Oliveira", curso:"SI", titulacao:"GRAD" , ai:{es:true, al:false, ds:false, mc:false}},
         {id:1, nome:"Aluisio", curso:"RC", titulacao:"GRAD", ai:{es:false, al:false, ds:true, mc:false}},
         {id:2, nome:"Peaga", curso:"ES", titulacao:"GRAD", ai:{es:false, al:true, ds:false, mc:false}},
@@ -20,7 +22,7 @@ const Editar = () => {
         for(let i=0;i<professores.length;i++)
             if(id == professores[i].id) return professores[i]
         return null
-    }
+    }*/
 
     const [nome, setNome] = useState("")
     const [curso, setCurso] = useState("")
@@ -32,18 +34,38 @@ const Editar = () => {
     // como [] está vazio, o useEffect funciona como um construtor!
     useEffect(
         () => {
-            let professor = getProfessorById(id)
+            /*let professor = getProfessorById(id)
             setNome(professor.nome)
             setCurso(professor.curso)
             setTitulacao(professor.titulacao)
-            setAi(professor.ai)
+            setAi(professor.ai)*/
+
+            axios.get(`http://localhost:3001/professor/retrieve/${id}`)
+            .then(
+                (response) => {
+                    setNome(response.data.nome)
+                    setCurso(response.data.curso)
+                    setTitulacao(response.data.titulacao)
+                    setAi(response.data.ai)
+                }
+            )
+            .catch(error => console.log(error))
         },
         []
     )
 
     function handleSubmit(event) {
         event.preventDefault()
-        alert("Seu Cadastro foi Editado!")
+        // alert("Seu Cadastro foi Editado!")
+        const professorAtualizado = {nome, curso, titulacao, ai}
+        axios.put(`http://localhost:3001/professor/update/${id}`, professorAtualizado)
+        .then(
+            (response) => {
+                alert(`Professor ID ${response.data.id} atualizado`)
+                navigate("/listarProfessor")
+            }
+        )
+        .catch(error => console.log(error))
     }
 
     function handleCheckbox(event) {

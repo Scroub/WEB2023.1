@@ -5,20 +5,59 @@ import EditIcon from "@mui/icons-material/Edit"
 import { styled } from "@mui/material/styles"
 import { tableCellClasses } from "@mui/material/TableCell"
 import { Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 const Listar = () => {
 
-    const professores= [
+    /*const professores= [
         {id:0, nome:"Iury de Oliveira", curso:"SI", titulacao:"GRAD"},
         {id:1, nome:"Aluisio", curso:"RC", titulacao:"GRAD"},
         {id:2, nome:"Peaga", curso:"ES", titulacao:"GRAD"},
         {id:3, nome:"Douglas Holanda", curso:"DD", titulacao:"MEST"},
         {id:4, nome:"Jefferson Carvalho", curso:"EC", titulacao:"DOUT"}
-    ]
+    ]*/
+
+    const [professores, setProfessores] = useState ([])
+    const [mudanca, setMudanca] = useState(false)
+
+    useEffect (
+        () => {
+            axios.get("http://localhost:3001/professor/listar")
+            .then(
+                (response) => {
+                    setProfessores(response.data)
+                }
+            )
+            .catch(error => console.log(error))
+        },
+        []
+    )
+
+    function deleteTeste (id) {
+        for(let i = 0; i < professores.length; i++){
+            if(professores[i].id == id) {
+                professores.splice(i, 1)
+                return true
+            }
+        }
+        return false
+    }
 
     function deleteProfessorById(id) {
         if(window.confirm("Deseja Excluir?")){
             alert("Professor " + id + " excluido com sucesso!")
+            axios.delete(`http://localhost:3001/professor/delete/${id}`)
+            .then(
+                (response) => {
+                    // Cria um novo vetor filtrando de acordo com o paramentro passado
+                    //const resultado = professores.filter(professor => professor.id != id)
+                    //setProfessores(resultado)
+                    deleteTeste(id)
+                    setMudanca(!mudanca)
+                }
+            )
+            .catch(error => console.log(error))
         }
     }
 
